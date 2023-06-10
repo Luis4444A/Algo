@@ -26,7 +26,7 @@ class PrimeFactorsCalculator
                 array_push($primeNum, $i);
             }
         }
-        while($number > 1) {
+        while ($number > 1) {
             for ($i = 0; $i < count($primeNum); $i++) {
                 while ($number % $primeNum[$i] == 0 && $number > 1) {
                     array_push($prime, $primeNum[$i]);
