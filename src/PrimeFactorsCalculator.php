@@ -10,31 +10,25 @@ class PrimeFactorsCalculator
         $this->numberProvider = $numberProvider;
     }
 
-    function calculate():array
+    function calculate(): array
     {
         $number = $this->numberProvider->getNumber();
         $primeNum = [];
         $prime = [];
-        for ($i = 2; $i <= $number; $i++) 
-        {
+        for ($i = 2; $i <= $number; $i++) {
             $bool = true;
-            for ($j = 2; $j < $i; $j++)
-            {
-                if ($i % $j == 0)
-                {
+            for ($j = 2; $j < $i; $j++) {
+                if ($i % $j == 0) {
                     $bool = false;
                 }
             }
-            if ($bool && $number % $i == 0)
-            {
+            if ($bool && $number % $i == 0) {
                 array_push($primeNum, $i);
             }
         }
-        while($number > 1){
-            for ($i = 0; $i < count($primeNum); $i++)
-            {
-                while ($number % $primeNum[$i] == 0 && $number > 1)
-                {
+        while($number > 1) {
+            for ($i = 0; $i < count($primeNum); $i++) {
+                while ($number % $primeNum[$i] == 0 && $number > 1) {
                     array_push($prime, $primeNum[$i]);
                     $number = $number / $primeNum[$i];
                 }
