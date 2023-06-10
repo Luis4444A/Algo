@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Tests;
-
 use Deg540\PHPTestingBoilerplate\NumberProvider;
 use Deg540\PHPTestingBoilerplate\PrimeFactorsCalculator;
 use PHPUnit\Framework\TestCase;
