@@ -9,7 +9,6 @@ class PrimeFactorsCalculator
     {
         $this->numberProvider = $numberProvider;
     }
-    
 
     function calculate(): array
     {
