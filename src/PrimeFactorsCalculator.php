@@ -10,7 +10,7 @@ class PrimeFactorsCalculator
         $this->numberProvider = $numberProvider;
     }
 
-    private function calculate(): array
+    function calculate(): array
     {
         $number = $this->numberProvider->getNumber();
         $primeNumber = [];
