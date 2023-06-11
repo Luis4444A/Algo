@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:     
       - uses: actions/checkout@v3
-      - name: Instalar dependencias
-        run:  composer install
-      - name: Correr los tests
-        run: ./vendor/bin/phpunit
-      - name : Ejecutar grumphp
-        run: ./vendor/bin/grumphp run
+      - run:  composer install
+      - run: ./vendor/bin/phpunit
+      - run: ./vendor/bin/grumphp run
