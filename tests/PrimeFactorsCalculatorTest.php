@@ -12,9 +12,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeNumber1Test()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('1');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([]), $result);
     }
 
@@ -24,9 +24,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeOneNumberTest()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('17');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([17]), $result);
     }
 
@@ -36,9 +36,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeTwoNumbersRepeatedTest()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('4');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([2, 2]), $result);
     }
 
@@ -48,9 +48,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeReturnTwoNumbersTest()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('6');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([2, 3]), $result);
     }
 
@@ -60,9 +60,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeReturnMoreNumbersTest()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('42');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([2, 3, 7]), $result);
     }
 
@@ -72,9 +72,9 @@ class PrimeFactorsCalculatorTest extends TestCase
     public function getPrimeBigNumberTest()
     {
         $numberProvider = Mockery::mock(NumberProvider::class);
-        $primerFactorsCalculator = new PrimeFactorsCalculator($numberProvider);
+        $primerFactors = new PrimeFactorsCalculator($numberProvider);
         $numberProvider->shouldReceive('getNumber')->once()->andReturn('524');
-        $result = $primerFactorsCalculator->calculate();
+        $result = $primerFactors->calculate();
         $this->assertEquals(([2, 2, 131]), $result);
     }
 }
