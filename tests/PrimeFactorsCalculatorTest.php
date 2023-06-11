@@ -5,6 +5,7 @@ namespace PHPTestingBoilerplate;
 use Deg540\PHPTestingBoilerplate\NumberProvider;
 use Deg540\PHPTestingBoilerplate\PrimeFactorsCalculator;
 use PHPUnit\Framework\TestCase;
+use Mockery;
 
 class PrimeFactorsCalculatorTest extends TestCase
 {
