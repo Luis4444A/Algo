@@ -13,7 +13,7 @@ class PrimeFactorsCalculator
     function calculate(): array
     {
         $number = $this->numberProvider->getNumber();
-        $primeNum = [];
+        $primeNumber = [];
         $prime = [];
         for ($i = 2; $i <= $number; $i++) {
             $bool = true;
@@ -23,14 +23,14 @@ class PrimeFactorsCalculator
                 }
             }
             if ($bool && $number % $i == 0) {
-                array_push($primeNum, $i);
+                array_push($primeNumber, $i);
             }
         }
         while ($number > 1) {
-            for ($i = 0; $i < count($primeNum); $i++) {
-                while ($number % $primeNum[$i] == 0 && $number > 1) {
-                    array_push($prime, $primeNum[$i]);
-                    $number = $number / $primeNum[$i];
+            for ($i = 0; $i < count($primeNumber); $i++) {
+                while ($number % $primeNumber[$i] == 0 && $number > 1) {
+                    array_push($prime, $primeNumber[$i]);
+                    $number = $number / $primeNumber[$i];
                 }
             }
         }
