@@ -8,6 +8,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 {
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeNumber1Test()
     {
@@ -20,6 +21,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeOneNumberTest()
     {
@@ -32,6 +34,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeTwoNumbersRepeatedTest()
     {
@@ -44,6 +47,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeReturnTwoNumbersTest()
     {
@@ -56,6 +60,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeReturnMoreNumbersTest()
     {
@@ -68,6 +73,7 @@ class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getPrimeBigNumberTest()
     {
