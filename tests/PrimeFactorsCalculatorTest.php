@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\PHPTestingBoilerplate;
+namespace PHPTestingBoilerplate;
 
 use Deg540\PHPTestingBoilerplate\NumberProvider;
 use Deg540\PHPTestingBoilerplate\PrimeFactorsCalculator;
